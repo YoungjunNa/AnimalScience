@@ -1,4 +1,5 @@
-#SAS code for repeated measures
+#SAS code for repeated measures (Littell et al., 1998)
+#https://dl.sciencesocieties.org/publications/jas/abstracts/76/4/1216
 
 Data nayoung;			
 Input			
