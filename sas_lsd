@@ -1,16 +1,5 @@
 #SAS code for 4x4 Latin square design (LSD)									
 
-#LSD descriotion
-#treatment = 1, 2, 3, 4
-#
-#	               period			
-#	              1	2	3	4
-#          
-# animal 1    	1	2	3	4
-# animal 2	    4	1	2	3
-# animal 3	    3	4	1	2
-# animal 4    	2	3	4	1
-
 DATA nayoung;						
 INPUT						
 treat	Animal	Period	DMI	BW	Water_intake	urine
