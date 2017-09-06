@@ -5,7 +5,7 @@
 #Github: https://github.com/YoungjunNa
 #Date: 9/6/2017
 
-#example of dataset is available at https://github.com/YoungjunNa/animal_science/blob/master/meta_dataset.xlsx
+#example of dataset is available at https://github.com/YoungjunNa/animal_science/blob/master/meta_dataframe.xlsx
 
 #packages
 library(meta)
