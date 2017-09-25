@@ -10,12 +10,11 @@
 ## c, the rate constant (h-1) of disappearance of fraction b.
 ## ED, effective degradability at three ruminal passage rates (ie., 0.02, 0.05, and 0.08/h).
 
+
 hour<-c(0,2,4,8,16,24,48)
-DMD<-c(95,93,88,75,58,43,10)
+DMD<-c(90,88,80,75,58,43,10)
 
-results<-data.frame(a=NA, b=NA, c=NA , ED2=NA, ED5=NA, ED8=NA)
-
-insitu<-function(hour,DMD){
+insitu<-function(){
   
   require(dplyr)
 
@@ -31,14 +30,17 @@ insitu<-function(hour,DMD){
   intercept<-reg[1]
   x<-reg[2]
   
-  results[2]<-exp(intercept)*100
-  results[1]<-100-results[2]-df1$DMD[n]
-  results[3]<-(-x)
-  results[4]<-results[1]+((results[2]*results[3])/(results[3]+0.02))
-  results[5]<-results[1]+((results[2]*results[3])/(results[3]+0.05))
-  results[6]<-results[1]+((results[2]*results[3])/(results[3]+0.08))
+  b<-exp(intercept)*100
+  a<-100-b-df1$DMD[n]
+  c<-(-x)
+  ED2<-a+((b*c)/(c+0.02))
+  ED5<-a+((b*c)/(c+0.05))
+  ED8<-a+((b*c)/(c+0.08))
+  
+  result<-data.frame(Item=c("a","b","c","ED2","ED5","ED8"), Value=c(a,b,c,ED2,ED5,ED8))
+  
+  print(result) 
   
 }
 
-insitu(hour,DMD)
-results
+insitu()
