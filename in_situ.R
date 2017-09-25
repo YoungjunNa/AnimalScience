@@ -17,7 +17,7 @@
 
 #a, the fraction of dry matter and crude protein at initiation of incubation.
 #b, the fraction of dry matter and crude protein insoluble but degradable in the rumen.
-#c, the rate constant (h-1) of disappearance of fraction b.
+#c, the rate constant (h^(-1)) of disappearance of fraction b.
 #ED, effective degradability at three ruminal passage rates (ie., 0.02, 0.05, and 0.08/h).
 
 #REFERENCES
